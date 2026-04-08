@@ -5,15 +5,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Flask App Running!"
+    return "Flask App Running Successfully!"
 
 @app.route("/health")
 def health():
     return {"status": "UP"}
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=5000)
 ################################################################################################3
 
 # Enhanced CSS with vibrant block colors
