@@ -3,7 +3,6 @@ import os
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def home():
     return "Welcome to Jenkins Tutorials - Flask App Running!"
@@ -11,6 +10,10 @@ def home():
 @app.route("/health")
 def health():
     return {"status": "UP"}
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
 ################################################################################################3
 
 # IMPORTANT: Entry point
